@@ -480,6 +480,7 @@ ifeq ($(RT28xx_MODE),STA)
 endif	
 
 clean:
+	$(MAKE) -C tools clean
 ifeq ($(TARGET), LINUX)
 	cp -f os/linux/Makefile.clean os/linux/Makefile
 	$(MAKE) -C os/linux clean
